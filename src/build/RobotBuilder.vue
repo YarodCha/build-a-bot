@@ -20,10 +20,6 @@
     </div>
 
     <div class="top-row">
-      <!-- <div class="robot-name">
-        {{ selectedRobot.head.title }}
-        <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
-      </div> -->
       <PartSelector
         :parts="availableParts.heads"
         position="top"
@@ -58,7 +54,6 @@
 </template>
 
 <script>
-// import availableParts from '../data/parts';
 import CollapsibleSection from '../shared/CollapsibleSection.vue';
 import createdHookMixin from './created-hook-mixin';
 import PartSelector from './PartSelector.vue';
@@ -72,8 +67,7 @@ export default {
     if (this.addedToCart) {
       next(true);
     } else {
-      /* eslint no-alert: 0 */
-      /* eslint no-restricted-globals: 0 */
+      // eslint-disable-next-line
       const response = confirm(
         'You have not added your robot to cart, are you sure you want to leave?',
       );
@@ -121,8 +115,7 @@ export default {
         + robot.torso.cost
         + robot.rightArm.cost
         + robot.base.cost;
-      this.$store.dispatch('robots/addRobotToCart', { ...robot, cost })
-        .then(() => this.$router.push('/cart'));
+      this.$store.dispatch('robots/addRobotToCart', { ...robot, cost });
       this.addedToCart = true;
     },
   },

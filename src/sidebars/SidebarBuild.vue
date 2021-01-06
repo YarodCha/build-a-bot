@@ -14,6 +14,5 @@ export default {
 .sidebar {
     font-size: 50px;
     transform: rotate(90deg);
-    color: green;
 }
 </style>

@@ -1,4 +1,6 @@
-import axios from 'axios';
+// import axios from 'axios';
+
+import partsData from '../../data/parts';
 
 export default {
   namespaced: true,
@@ -16,14 +18,17 @@ export default {
   },
   actions: {
     getParts({ commit }) {
-      axios.get('/api/parts')
-        .then((result) => commit('updateParts', result.data))
-        .catch(console.error);
+      commit('updateParts', partsData);
+      // axios.get('/api/parts')
+      //   .then((result) => commit('updateParts', result.data))
+      // .then(() => this.$router.push('/cart'));
+      //   .catch(console.error);
     },
-    addRobotToCart({ commit, state }, robot) {
-      const cart = [...state.cart, robot];
-      return axios.post('/api/cart', cart)
-        .then(() => commit('addRobotToCart', robot));
+    addRobotToCart({ commit }, robot) {
+      // const cart = [...state.cart, robot];
+      commit('addRobotToCart', robot);
+      // return axios.post('/api/cart', cart)
+      //   .then(() => commit('addRobotToCart', robot));
     },
   },
   getters: {

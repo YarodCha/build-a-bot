@@ -50,11 +50,11 @@ export default {
 
 <style>
 body {
-  background: linear-gradient(to bottom, #555, #999);
+  background: linear-gradient(to bottom, #011638, #01345f);
   background-attachment: fixed;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: monospace;
 }
 main {
   padding: 30px;
@@ -113,6 +113,6 @@ ul {
   text-align: center;
   display: inline-block;
   border-radius: 100px;
-  background-color: mediumseagreen;
+  background-color: #ffb42b;
 }
 </style>

@@ -79,4 +79,7 @@ export default {
     font-size: 18px;
     color: red;
   }
+  table {
+    font-size: 1rem;
+  }
 </style>
